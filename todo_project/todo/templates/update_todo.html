@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Todo Item</title>
+</head>
+<body>
+    <h2>Update Todo Item</h2>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="content" value="{{ todo_item.content }}" required>
+        <button type="submit">Update</button>
+    </form>
+    <a href="{% url 'todo_list' %}">Back to Todo List</a>
+</body>
+</html>
